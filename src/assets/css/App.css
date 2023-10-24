@@ -1,0 +1,117 @@
+#root {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(250, 178, 35);
+    padding: 0.5rem;
+}
+
+img {
+    width: 180px;
+    margin: 1rem 4rem;
+}
+
+.custom-navbar {
+    background-color: rgb(250, 178, 35);
+    border-top: 1px solid rgb(52, 52, 52);
+    border-bottom: 1px solid rgb(52, 52, 52);
+    padding-right: 5rem;
+}
+.custom-input {
+    padding: 0.5rem 5rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.bg-body-tertiary {
+    display: flex;
+    justify-content: center;
+}
+main {
+    background-color: rgb(120, 158, 113);
+    color: azure;
+    font-size: 15px;
+    font-style: oblique;
+    padding: 1rem 2rem 0.5rem 2rem;
+}
+
+section {
+    padding: 3rem;
+    text-align: start;
+}
+
+.date-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bi-arrow-down-up {
+    margin-left: 10px;
+}
+
+.order-btn {
+    border-style: none;
+    background-color: white;
+    color: black;
+}
+.table-container {
+    margin: 1rem 5rem;
+    border: 1px solid rgb(216, 216, 216);
+}
+
+td.color-date {
+    font-weight: 500;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    background-color: #424242;
+    color: rgb(218, 218, 218);
+}
+img.footer-image {
+    margin: 20px;
+    width: 150px;
+}
+footer,
+.p {
+    font-size: 0.6rem;
+    padding-top: 1rem;
+}
+
+.social-icons {
+    background-color: rgb(250, 178, 35);
+    padding: 1rem;
+}
+
+@media screen and (max-width: 540px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        width: 150px;
+        margin: 2rem 1rem;
+    }
+
+    div.table-container {
+        margin: 1rem;
+    }
+
+    .type-text,
+    .type-title {
+        display: none;
+    }
+}
