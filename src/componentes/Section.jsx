@@ -14,7 +14,7 @@ const Section = () => {
                 </p>
 
                 <p>
-                    Consulta más en
+                    Consulta más en {""}
                     <strong>
                         <a href="#">Preguntas Frecuentes</a>
                     </strong>
