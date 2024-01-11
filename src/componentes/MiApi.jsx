@@ -8,7 +8,7 @@ function MiApi() {
 
     const getData = async () => {
         try {
-            const res = await fetch("https://api.victorsanmartin.com/feriados/en.json");
+            const res = await fetch("https://www.feriadosapp.com/api/holidays-2019.json");
             const jsonData = await res.json();
             setData(jsonData.data);
             console.log(jsonData.data);
@@ -66,11 +66,11 @@ function MiApi() {
                     </thead>
 
                     <tbody>
-                        {filteredData.map(({ date, title, type }) => (
-                            <tr key={`${date}-${title}-${type}`}>
+                        {filteredData.map(({ date, title, extra }) => (
+                            <tr key={`${date}-${title}-${extra}`}>
                                 <td className="color-date">{date}</td>
                                 <td>{title}</td>
-                                <td className="type-text">{type}</td>
+                                <td className="type-text">{extra}</td>
                             </tr>
                         ))}
                     </tbody>
