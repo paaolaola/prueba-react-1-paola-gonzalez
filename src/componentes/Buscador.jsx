@@ -1,12 +1,15 @@
-import React from "react";
 import { useState } from "react";
 
+//Componente para buscar por nombre en la tabla
 const Buscador = ({ onSearch }) => {
+    //Estado para guardar el valor del input de busqueda
     const [search, setSearch] = useState("");
-
+    //Funcion para buscar por nombre en la tabla
     const handleChangeSearch = (e) => {
         const inputValue = e.target.value.toLowerCase();
+        //Guarda el valor del input en el estado
         setSearch(inputValue);
+        //Llama a la funcion onSearch del componente padre
         onSearch(inputValue);
     };
 

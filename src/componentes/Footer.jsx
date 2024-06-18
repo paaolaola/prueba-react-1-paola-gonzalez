@@ -1,6 +1,5 @@
-import React from "react";
-
 const Footer = () => {
+    // Componente que muestra el footer de la página
     return (
         <>
             <footer>

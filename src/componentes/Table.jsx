@@ -1,33 +1,37 @@
 import { useState, useEffect } from "react";
 import Buscador from "./Buscador";
-
-function MiApi() {
+//Componente para mostrar la tabla de feriados
+function Table() {
+    //Estado para guardar los datos de los feriados
     const [data, setData] = useState([]);
     const [reversed, setReversed] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
 
+    //Funcion para obtener los datos de los feriados desde la API
     const getData = async () => {
         try {
             const res = await fetch("https://www.feriadosapp.com/api/holidays-2019.json");
             const jsonData = await res.json();
             setData(jsonData.data);
-            console.log(jsonData.data);
         } catch (error) {
-            console.log(error);
+            console.error("Error al obtener los datos:", error);
         }
     };
-
+    //Ejecutar la funcion getData al cargar el componente por primera vez
     useEffect(() => {
         getData();
     }, []);
 
+    //Filtrar los datos de la tabla segun el termino de busqueda ingresado
+    const filteredData = data.filter(({ title }) => title.toLowerCase().includes(searchTerm.toLowerCase()));
+
+    //Funcion para invertir el orden de los datos de la tabla
     const reverseData = () => {
         const reversedData = [...data].reverse();
+        //Actualizar el estado de los datos y el estado de reversed
         setData(reversedData);
         setReversed(!reversed);
     };
-
-    const filteredData = data.filter(({ title }) => title.toLowerCase().includes(searchTerm.toLowerCase()));
 
     return (
         <>
@@ -80,4 +84,4 @@ function MiApi() {
     );
 }
 
-export default MiApi;
+export default Table;

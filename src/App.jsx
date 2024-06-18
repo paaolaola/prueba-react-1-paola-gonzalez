@@ -9,7 +9,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Header from "./componentes/Header";
 import Nav from "./componentes/Nav";
 import Main from "./componentes/Main";
-import MiApi from "./componentes/MiApi";
+import Table from "./componentes/Table";
 import Section from "./componentes/Section";
 import Footer from "./componentes/Footer";
 
@@ -18,11 +18,11 @@ function App() {
         document.title = "Feriados en Chile";
     }, []);
     return (
-        <div>
+        <>
             <Header />
             <Nav />
             <Main />
-            <MiApi />
+            <Table />
             <Section />
             <Footer />
             <div className="social-icons">
@@ -30,7 +30,7 @@ function App() {
                 <FacebookOutlinedIcon />
                 <WhatsAppIcon />
             </div>
-        </div>
+        </>
     );
 }
 

@@ -1,6 +1,5 @@
-import React from "react";
-
 const Header = () => {
+    // Componente que muestra el header de la página
     return (
         <>
             <header>

@@ -1,6 +1,5 @@
-import React from "react";
-
 const Main = () => {
+    // Componente que muestra el contenido principal de la página
     return (
         <>
             <main>
